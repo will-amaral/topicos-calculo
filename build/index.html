@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Tópicos de Cálculo</title>
 </head>
-<body>
-	<embed src="./build/relatorio-ic.pdf" type="application/pdf" width="100%">
+<body onload="loadPdf()">
+	<script>
+		function loadPdf() {
+			window.location = 'https://willamaralcjo.github.io/build/relatorio-ic.pdf';
+		}
+	</script>
 </body>
 </html>
