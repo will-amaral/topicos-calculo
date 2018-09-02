@@ -1,6 +1,6 @@
 # Tópicos de Cálculo Diferencial e Integral
 
-Esse projeto faz parte do projeto institucional de bolsa de iniciação científica do Instituto Federal de Educação, Ciência e Tecnologia. Ele utiliza as ferramentas Latex e Tex Live para a formatação das fórmulas matemáticas. Você pode ver o projeto compilado [neste link](https://willamaralcjo.github.io/topicos-calculo).
+Esse projeto faz parte do projeto institucional de bolsa de iniciação científica do Instituto Federal de Educação, Ciência e Tecnologia. Ele utiliza as ferramentas Latex e Tex Live para a formatação das fórmulas matemáticas. Você pode ver o projeto compilado [neste link](https://will-amaral.github.io/topicos-calculo).
 
 ## Lista de conteúdos
 - [Sobre o Projeto](#sobre-o-projeto)
