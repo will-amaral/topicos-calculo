@@ -11,6 +11,7 @@
 \usepackage{graphicx}
 \usepackage{microtype}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage[brazilian,hyperpageref]{backref}
@@ -24,13 +25,13 @@
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 \renewcommand{\backref}{}
 \renewcommand*{\backrefalt}[4]{
-    \ifcase #1
-        Nenhuma citação no texto.
-    \or
-        Citado na página #2.
-    \else
-        Citado #1 vezes nas páginas #2.
-    \fi}
+	\ifcase #1
+		Nenhuma citação no texto.
+	\or
+		Citado na página #2.
+	\else
+		Citado #1 vezes nas páginas #2.
+	\fi}
 
 % Informações para capa e folha de rosto
 \titulo{Tópicos de Cálculo Diferencial e Integral}
@@ -38,9 +39,9 @@
 \local{Campos do Jordão, SP}
 \data{2018}
 \instituicao{
-    Instituo Federal de São Paulo
-    \par
-    Campus Campos do Jordão
+	Instituo Federal de São Paulo
+	\par
+	Campus Campos do Jordão
 }
 \tipotrabalho{Projeto (Pesquisa)}
 \preambulo{Relatório Final de Pesquisa desenvolvido como parte do Projeto de Iniciação Científica, elaborado pelo aluno do curso de Tecnologia em Análise e Desenvolvimento de Sistemas, Willian José do Amaral e orientado pelo Prof. Dr. Sílvio César Otero-Garcia}
@@ -49,17 +50,17 @@
 \definecolor{blue}{RGB}{41,5,195}
 \makeatletter
 \hypersetup{
-    pdftitle={\@title}, 
-            pdfauthor={\@author},
-            pdfsubject={\imprimirpreambulo},
-            pdfcreator={LaTeX with abnTeX2},
-            pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
-            colorlinks=true,
-            linkcolor=blue,
-            citecolor=blue,
-            filecolor=magenta,
-            urlcolor=blue,
-            bookmarksdepth=4
+	pdftitle={\@title}, 
+			pdfauthor={\@author},
+	    	pdfsubject={\imprimirpreambulo},
+		    pdfcreator={LaTeX with abnTeX2},
+			pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
+			colorlinks=true,
+	    	linkcolor=blue,
+	    	citecolor=blue,
+	    	filecolor=magenta,
+			urlcolor=blue,
+			bookmarksdepth=4
 }
 \makeatother
 
@@ -460,76 +461,14 @@ Resposta: \bolden{$|x| = \frac{11}{8}$ ou $\frac{11}{10}$}
 \bigskip
 
 
-3. Resolver as inequações em I\!R.
-
-\textit{(a)} 
-
-Resolução:
-\bigskip
-
-
-\textit{(b)} 
-
-Resolução:
-\bigskip
-
-
-\textit{(c)} 
-
-Resolução:
-\bigskip
-
-
-\textit{(d)}
-
-Resolução:
-\bigskip
-
-
-\textit{(e)}
-
-Resolução:
-\bigskip
-
-
-\textit{(f)}
-
-Resolução:
-\bigskip
-
-
-\textit{(g)}
-
-Resolução:
-\bigskip
-
-
-\textit{(h)}
-
-Resolução:
-\bigskip
-
-
-\textit{(i)}
-
-Resolução:
-\bigskip
-
-
-\textit{(j)}
-
-Resolução:
-\bigskip
-
-
 %% Funções
 \section{Funções}
 
-O conceito de função refere-se essencialmente à correspondência entre conjuntos. 
+O conceito de função refere-se essencialmente à correspondência entre conjuntos. Uma função associa elementos de um conjunto a elementos de outro conjunto. Recursos computacionais são ainda mais importantes no estudo de funções, uma vez que auxiliam na visualização das propriedades e características das funções. 
 
 \subsection{Exercícios}
 
-14. Usando uma ferramenta gráfica, traçar as curvas definidas pelas equações dadas, identificando as que representam o gráfico de uma função $y = f(x)$. Neste caso, determine a função, o domínio e o conjunto imagem. 
+1. Usando uma ferramenta gráfica, traçar as curvas definidas pelas equações dadas, identificando as que representam o gráfico de uma função $y = f(x)$. Neste caso, determine a função, o domínio e o conjunto imagem. 
 
 \textit{(a)} $y = 3x - 1$
 
@@ -549,10 +488,73 @@ Resolução:
     {3*x - 1};
 \end{axis}
 \end{tikzpicture}
+
+Resposta: É uma função
+
+$f(x) = 3x - 1$ 
+
+$D(f) = \mathbb{R}$
+
+$Im(f) = \mathbb{R}$
 \bigskip
 
+\textit{(b)} $y - x^2 = 0$
 
-\textit{(b)} $y + \sqrt{4 - x^2} = 0$
+Resolução:
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {x^2};
+\end{axis}
+\end{tikzpicture}
+
+Resposta: É uma função
+
+$f(x) = x^2$ 
+
+$D(f) = \mathbb{R}$
+
+$Im(f) = \mathbb{R}\star$
+\bigskip
+
+\textit{(c)} $y^2 - x = 0$
+
+Resolução:
+
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {sqrt(x)};
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {-sqrt(x)};
+\end{axis}
+\end{tikzpicture}
+
+Resposta: Não é uma função
+\bigskip
+
+\textit{(d)} $y + \sqrt{4 - x^2} = 0$
 
 Resolução:
 
@@ -570,31 +572,19 @@ Resolução:
     {-sqrt(4 - x^2)};
 \end{axis}
 \end{tikzpicture}
+
+Resposta: É uma função
+
+$f(x) = -\sqrt{4 - x^2}$ 
+
+$D(f) = [-2,2]$
+
+$Im(f) = [-2,0]$
 \bigskip
 
-
-\textit{(c)} 
+\textit{(e)} $x^2 + y^2 = 16$
 
 Resolução:
-\bigskip
-
-
-\textit{(d)}
-
-Resolução:
-\bigskip
-
-
-\textit{(e)}
-
-Resolução:
-\bigskip
-
-
-\textit{(f)}
-
-Resolução:
-\bigskip
 
 \begin{tikzpicture}
 \begin{axis}[
@@ -607,60 +597,73 @@ Resolução:
     samples=100, 
     color=blue,
     ]
-    {x^2 + 2*x + 1};
+    {sqrt(16 - x^2)};
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {-sqrt(16 - x^2)};
 \end{axis}
 \end{tikzpicture}
 
-%% Limite e Continuidade
-\section{Limite e Continuidade}
+Resposta: Não é uma função
+\bigskip
 
-Texto
+\textit{(f)} $y = \frac{1}{x}$
 
-\subsection{Exercícios}
+Resolução:
 
-%% Derivada
-\section{Derivada}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {1/x};
+\end{axis}
+\end{tikzpicture}
 
-Texto
+Resposta: É uma função
 
-\subsection{Exercícios}
+$f(x) = \frac{1}{x}$ 
 
-%% Aplicações da Derivada
-\section{Aplicações da Derivada}
+$D(f) = \mathbb{R} - \{0\}$
 
-Texto
+$Im(f) = \mathbb{R} - \{0\}$
+\bigskip
 
-\subsection{Exercícios}
+\textit{(g)} $y - x^2 = 11$
 
-%% Introdução à Integração
-\section{Introdução à Integração}
+Resolução:
 
-Texto
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = {$f(x)$},
+]
+\addplot [
+    domain=-10:10, 
+    samples=100, 
+    color=blue,
+    ]
+    {11 + x^2};
+\end{axis}
+\end{tikzpicture}
 
-\subsection{Exercícios}
+Resposta: É uma função
 
-%% Métodos de Integração
-\section{Métodos de Integração}
+$f(x) = 11 + x^2$ 
 
-Texto
+$D(f) = \mathbb{R}$
 
-\subsection{Exercícios}
-
-%% Aplicações da Integral Definida
-\section{Aplicações da Integral Definida}
-
-Texto
-
-\subsection{Exercícios}
-
-
-
-% Considerações Finais
-\chapter*[Considerações finais]{Considerações finais}
-\addcontentsline{toc}{chapter}{Considerações finais}
-
-Escrever as considerações finais do projeto
-
-\bibliography{referencias}
+$Im(f) = [11,+\infty)$
+\bigskip
 
 \end{document}
