@@ -1,0 +1,12 @@
+{
+  "name": "topicos-calculo",
+  "version": "1.0.0",
+  "description": "Projeto de IC",
+  "main": "index.js",
+  "repository": "git:will-amaral/topicos-calculo",
+  "author": "Willian Amaral <willian.amaral@outlook.com.br>",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
