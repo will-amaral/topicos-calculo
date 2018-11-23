@@ -6,6 +6,9 @@
   "repository": "git:will-amaral/topicos-calculo",
   "author": "Willian Amaral <willian.amaral@outlook.com.br>",
   "license": "MIT",
+	"scripts": {
+		"deploy": "gh-pages -d build"
+	},
   "devDependencies": {
     "gh-pages": "^2.0.1"
   }
